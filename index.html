@@ -6,10 +6,31 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Calculadora con JavaScript</title>
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-	<h1>Calculadora en JavaScript</h1>
+	<main>
+		<h1>Calculadora JavaScript</h1>
+		<div class="container-global-input">
+			<div class="container-input">
+				<label for="numero1">Primer Número: <span class="numeros-ingresados">Prueba</span></label>
+				<input id="numero1" name="numero1" type="number" onchange="ejecutarOperacion()">
+			</div>
+			<div class="container-input">
+				<label for="numero2">Segundo Número: <span class="numeros-ingresados">Prueba</span></label>
+				<input id="numero2" name="numero2" type="number" onchange="ejecutarOperacion()">
+			</div>
+			<select name="operaciones" id="operaciones" onchange="obtieneOperacion()">
+				<option value="Suma">Suma</option>
+				<option value="Resta">Resta</option>
+				<option value="Multiplicación">Multiplicación</option>
+				<option value="División">División</option>
+			</select>
+			<h2>Resultado: <span>Prueba</span></h3>
+		</div>
+	</main>
 </body>
+<script src="js/script.js"></script>
 
 </html>
