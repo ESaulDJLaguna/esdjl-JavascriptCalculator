@@ -50,29 +50,48 @@ function obtieneOperacion(): void {
 }
 // Realiza operación y muestra resultado en el <span>
 function ejecutarOperacion(): void {
+  // Si los dos números están vacíos
+  if (
+    (num1 === undefined || isNaN(num1)) &&
+    (num2 === undefined || isNaN(num2))
+  ) {
+    spans[2].innerText = "";
+    spans[2].className = "";
+  }
   // Ninguno de los dos números puede estar vacío
-  if (num1 === undefined || isNaN(num1) || num2 === undefined || isNaN(num2)) {
+  else if (
+    num1 === undefined ||
+    isNaN(num1) ||
+    num2 === undefined ||
+    isNaN(num2)
+  ) {
     spans[2].innerText = "Falta alguno de los operandos";
+    spans[2].className = "error";
   } else {
     switch (operacion) {
       case "Suma":
         resultado = num1 + num2;
         spans[2].innerText = resultado.toString();
+        spans[2].className = "resultado-correcto";
         break;
       case "Resta":
         resultado = num1 - num2;
         spans[2].innerText = resultado.toString();
+        spans[2].className = "resultado-correcto";
         break;
       case "Multiplicación":
         resultado = num1 * num2;
         spans[2].innerText = resultado.toString();
+        spans[2].className = "resultado-correcto";
         break;
       case "División":
         if (num2 === 0) {
+          spans[2].className = "error";
           spans[2].innerText = "El divisor no puede ser 0";
         } else {
           resultado = num1 / num2;
           spans[2].innerText = resultado.toString();
+          spans[2].className = "resultado-correcto";
         }
         break;
     }

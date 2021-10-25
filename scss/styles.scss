@@ -1,0 +1,135 @@
+/* 
+Querys:
+	- Teléfono: 414x768
+	- Tablet: 1024x1366
+	- PC: 1280x720
+*/
+$responsiveMobile: 414px;
+$responsiveTablet: 1024px;
+$responsivePC: 1280px;
+$primary-color: #103d69;
+
+.error {
+  color: rgb(202, 71, 71);
+  font-style: italic;
+}
+
+.resultado-correcto {
+  color: rgba(152, 221, 175);
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Media Query para teléfonos: 0 - 414px */
+body {
+  background-color: $primary-color;
+  font: {
+    family: "Arial";
+    size: 16px;
+  }
+}
+h1 {
+  text-align: center;
+  font: {
+    size: 32px;
+    weight: bolder;
+  }
+  text-shadow: 1px 1px 2px yellowgreen, 0 0 1em yellowgreen,
+    0 0 0.2em yellowgreen;
+  height: 10vh;
+  color: white;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-global-input {
+  width: 80vw;
+  height: 60vh;
+  margin-left: 10vw;
+  .container-input {
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+
+    label {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      padding: 15px 15px;
+      border-bottom: {
+        style: solid;
+        width: 2px;
+        color: rgb(253, 253, 47);
+      }
+      span {
+        color: rgba(152, 221, 175, 0.64);
+        font-weight: lighter;
+        font-size: 18px;
+      }
+    }
+    input {
+      background-color: rgb(240, 240, 240);
+      width: 100%;
+      height: 50px;
+      font-size: 32px;
+      text-align: center;
+      border-radius: 50px;
+      border: 2px solid rgb(0, 0, 0);
+      box-shadow: 0 0px 15px rgb(253, 253, 47);
+    }
+  }
+}
+.container-operaciones {
+  height: 10vh;
+  width: 100%;
+  background-color: orangered;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  select {
+    width: 60%;
+    height: 60%;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-align: center;
+    option {
+      font-size: 20px;
+      font-style: italic;
+      background-color: orangered;
+      border: solid 1px white;
+    }
+  }
+}
+.resultado {
+  height: 20vh;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+}
+@media (min-width: $responsiveMobile + 1) and (max-width: $responsiveTablet - 1) {
+  body {
+    background-color: rgb(64, 169, 201);
+  }
+}
+@media (min-width: $responsiveTablet) {
+  body {
+    background-color: blueviolet;
+  }
+}
