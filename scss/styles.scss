@@ -123,13 +123,59 @@ h1 {
   align-content: center;
   text-align: center;
 }
+// Media Query para tablet
 @media (min-width: $responsiveMobile + 1) and (max-width: $responsiveTablet - 1) {
-  body {
-    background-color: rgb(64, 169, 201);
-  }
 }
+// Media Query para PC
 @media (min-width: $responsiveTablet) {
-  body {
-    background-color: blueviolet;
+  main {
+    background-color: #082746;
+    border: 2px solid white;
+    width: 40vw;
+    height: 80vh;
+    margin: {
+      left: 30vw;
+      top: 10vh;
+    }
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(253, 253, 47);
+  }
+  h1 {
+    width: 100%;
+  }
+  .container-global-input {
+    width: 80%;
+    height: 60%;
+    margin-left: 10%;
+    padding: 10px;
+    .container-input {
+      height: 50%;
+      label {
+        padding: 0;
+        border: none;
+      }
+
+      input {
+        width: 80%;
+      }
+    }
+  }
+  .container-operaciones {
+    width: 40vw;
+    height: 10%;
+    left: -22px;
+    border: {
+      left: 2px solid white;
+      right: 2px solid white;
+    }
+    position: relative;
+    margin-right: 20px;
+    select {
+      width: 50%;
+    }
+  }
+  .resultado {
+    height: 20%;
   }
 }
