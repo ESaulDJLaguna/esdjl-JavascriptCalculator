@@ -29,13 +29,13 @@ Tecnologías utilizadas
 1. Clonar el repositorio:
 
 ```
-git clone https://github.com/ESaulDJLaguna/JavaScript-calculator.git
+git clone https://github.com/ESaulDJLaguna/esdjl-JavascriptCalculator.git
 ```
 
 2. Accede a la carpeta generada:
 
 ```
-cd JavaScript-calculator
+cd esdjl-JavascriptCalculator/
 ```
 
 3. Instala las dependencias:
